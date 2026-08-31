@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+body {
+  background-color: #f7fafc;
+  overflow-x: hidden;
+}
+
+.font-cocana {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.font-garamond {
+  font-family: 'EB Garamond', serif;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-exo {
+  font-family: 'Exo 2', sans-serif;
+}
+.font-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-greatvibes {
+  font-family: 'Great Vibes', cursive;
+}
+.font-allura {
+  font-family: 'Allura', cursive;
+}
+.font-alexbrush {
+  font-family: 'Alex Brush', cursive;
+}
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo-class {
+  height: 20%;
+  width: auto;
+}
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-container video {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Fix date input icon color in dark UI */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
