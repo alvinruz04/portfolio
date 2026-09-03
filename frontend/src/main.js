@@ -28,7 +28,7 @@ function startVersionWatcher({ intervalMs = 60000, auto = false } = {}) {
       // Version changed -> update available
       if (currentVersion !== serverVersion) {
         const doReload =
-          auto || window.confirm('A new version of You Glow Babe Page is available. Reload now?')
+          auto || window.confirm('A new version of Filifinder Page is available. Reload now?')
 
         if (doReload) {
           // Prevent repeat prompts if the reload is delayed by intermediaries
