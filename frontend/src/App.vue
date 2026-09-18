@@ -8,6 +8,7 @@
 <script setup>
 import { ref, provide } from 'vue'
 import Toast from '@/components/myToast.vue'
+const base = import.meta.env.BASE_URL
 
 const toasts = ref([])
 let id = 0

@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const menuOpen = ref(false)
 const activeProject = ref(null)
 
@@ -8,7 +10,7 @@ const projects = [
   {
     name: 'Intelogram',
     eyebrow: 'Government operations · Verification platform',
-    image: '/assets/projects/intelogram.webp',
+    image: asset('assets/projects/intelogram.webp'),
     link: 'https://intelogram.ph/',
     problem:
       'Government clients needed a reliable way to record and monitor the use of serialized security stickers.',
@@ -28,7 +30,7 @@ const projects = [
   {
     name: 'Balance Studio',
     eyebrow: 'Wellness operations · Booking system',
-    image: '/assets/projects/balance-studio.webp',
+    image: asset('assets/projects/balance-studio.webp'),
     link: 'https://balancestudio.ph/',
     problem:
       'A new Pilates and yoga studio needed an organized way to receive bookings and manage its schedule.',
@@ -43,7 +45,7 @@ const projects = [
   {
     name: 'You Glow Babe',
     eyebrow: 'Commerce operations · Seller directory',
-    image: '/assets/projects/you-glow-babe.webp',
+    image: asset('assets/projects/you-glow-babe.webp'),
     link: 'https://youglowbabemain.com/',
     problem:
       'The brand’s previous backend was no longer working, and customers could not reliably search for legitimate resellers or reported fake pages.',
@@ -58,7 +60,7 @@ const projects = [
   {
     name: 'Pagmaya Beach Resort',
     eyebrow: 'Hospitality operations · Investment tracking',
-    image: '/assets/projects/pagmaya.webp',
+    image: asset('assets/projects/pagmaya.webp'),
     link: 'https://www.pagmayabeachresort.com/',
     problem:
       'The business needed a clearer way to monitor investors, investment tiers, contributions, payment schedules, and remaining balances.',
@@ -73,7 +75,7 @@ const projects = [
   {
     name: 'FILIfinder',
     eyebrow: 'Travel and services · Phase 1',
-    image: '/assets/projects/filifinder.webp',
+    image: asset('assets/projects/filifinder.webp'),
     link: 'https://filifinder.com/',
     problem:
       'A new business needed a credible platform beyond social media while its broader service ecosystem is being developed.',
@@ -155,7 +157,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
           </div>
         </div>
         <div class="hero-visual" aria-label="From operational problem to practical web system">
-          <div class="portrait-frame"><img src="/assets/profile.webp" alt="John Alvin Ruz" /></div>
+          <div class="portrait-frame">
+            <img :src="asset('assets/profile.webp')" alt="John Alvin Ruz" />
+          </div>
           <div class="signal-card signal-one"><b>01</b><span>Understand the process</span></div>
           <div class="signal-card signal-two"><b>02</b><span>Remove the friction</span></div>
           <div class="signal-card signal-three"><b>03</b><span>Build for daily use</span></div>
